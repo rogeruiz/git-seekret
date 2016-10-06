@@ -19,6 +19,11 @@ var listGitSeekretHookHandler map[string]GitSeekretHookHandler = map[string]GitS
 		Disable: HookPreCommitDisable,
 		Run:     HookPreCommitRun,
 	},
+  "commit-msg": GitSeekretHookHandler {
+    Enable: HookCommitMsgEnable,
+    Disable: HookCommitMsgDisable,
+    Run: HookCommitMsgRun,
+  },
 }
 
 func GitSeekretHook(c *cli.Context) error {
